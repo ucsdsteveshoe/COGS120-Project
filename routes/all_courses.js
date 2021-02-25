@@ -21,15 +21,15 @@ exports.view = function(request, response){
     courseList.push(newCourse);
   }
 
-  var tempDict = {
+  var tempJSON = {
     classes: courseList
   };
 
   var username = request.body.username;
 	var password = request.body.password;
 
-  tempDict["username"] = username;
-  tempDict["password"] = password;
+  tempJSON["username"] = username;
+  tempJSON["password"] = password;
 
-  response.render('all_courses', tempDict);
+  response.render('all_courses', tempJSON);
 };
