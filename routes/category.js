@@ -1,5 +1,7 @@
-exports.viewCategory = function(req, res){
-    //var name = req.params.name;
-    //console.log("The project name is: " + name);
-    res.render("category");
+exports.viewCategory = function(request, response){
+    var course_name = request.params.course_name;
+
+    response.render("category", {
+        "course": course_name
+    });
 }
