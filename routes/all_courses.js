@@ -10,9 +10,5 @@ exports.view = function(request, response){
   data["username"] = username;
   data["password"] = password;
 
-  //for (var key in data) {
-    //console.log(key + " -> " + data[key].class)
-  //}
-
   response.render('all_courses', data);
 };
