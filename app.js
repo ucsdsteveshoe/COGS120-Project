@@ -41,10 +41,12 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get("/all_courses", all_courses.view);
 app.get('/course/:course_name', course.viewCourse);
-app.get("/course/category/:course_name", category.viewCategory);
+app.get("/course/category/:course_name/:category_name", category.viewCategory);
 app.get('/settings', settings.view);
 app.get("/course/settings/:course_name", settings.view);
 
+app.get("/course/category/catData/:course_name/:category_name", category.getData);
+app.post("/course/category/catData/:course_name/:category_name", category.postData);
 app.post("/all_courses", all_courses.view)
 // Example route
 // app.get('/users', user.list);
